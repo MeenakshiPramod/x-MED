@@ -11,7 +11,7 @@ FastAPI backend for an online pharmacy demo. Features product management, user p
 | Endpoint | Method | Description |  
 |----------|--------|-------------|  
 | `/products/` | GET | List all medicines |  
-| `/products/featured` | GET | Get 6 featured products |  
+| `/products/featured` | GET | Get featured products |  
 | `/products/search?query=` | GET | Search by name/category/diagnosis |  
 
 ### **Admin**  
@@ -47,4 +47,3 @@ FastAPI backend for an online pharmacy demo. Features product management, user p
    ```bash  
    git clone https://github.com/yourusername/x-med-backend.git  
 
-   
