@@ -5,6 +5,48 @@
 ## **📌 Project Overview**  
 FastAPI backend for an online pharmacy demo. Features product management, user profiles, and admin controls.  
 
+## **🗃️ Database Structure**  
+All tables are stored in **Supabase (PostgreSQL)**.  
+
+### **1. `products` Table**  
+| Column | Type | Description |  
+|--------|------|-------------|  
+| `id` | `int8` | Auto-incremented primary key |  
+| `name` | `text` | Medicine name (e.g., "Aspirin") |  
+| `description` | `text` | Short description |  
+| `price` | `float8` | Price (e.g., `5.99`) |  
+| `category` | `text` | E.g., "Painkiller", "Antibiotic" |  
+| `diagnosis` | `text` | E.g., "Headache", "Fever" |  
+| `image_url` | `text` | URL of product image |  
+| `is_featured` | `bool` | `true` for homepage display |  
+
+### **2. `users` Table**  
+| Column | Type | Description |  
+|--------|------|-------------|  
+| `id` | `int8` | Auto-incremented primary key |  
+| `name` | `text` | User's full name |  
+| `email` | `text` | Unique user email |  
+| `phone` | `text` | Contact number |  
+| `place` | `text` | User's location |  
+| `profile_pic_url` | `text` | Optional profile image URL |  
+
+### **3. `settings` Table**  
+| Column | Type | Description |  
+|--------|------|-------------|  
+| `key` | `text` | Primary key (e.g., "banner", "email") |  
+| `value` | `text` | Stored data (e.g., URLs, contact info) |  
+
+**Example Settings Data**:  
+| `key` | `value` |  
+|-------|---------|  
+| `about` | `x-MED is a demo...` |  
+| `banner` | `https://example.com/banner.jpg` |  
+| `email` | `contact@xmed.example` |  
+| `phone1` | `+1 123-456-7890` |  
+
+
+---
+
 ## **Endpoints**  
 
 ### **Products**  
