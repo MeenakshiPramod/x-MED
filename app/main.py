@@ -1,11 +1,15 @@
 from fastapi import FastAPI
-from app.routes import products  # Import the router
+from app.routes import products  
+from app.routes import products, admin, general, profile 
 from app.database import supabase
 
 app = FastAPI()
 
 # Include the product routes
 app.include_router(products.router)
+app.include_router(admin.router)      
+app.include_router(general.router) 
+app.include_router(profile.router)
 
 @app.get("/")
 def home():
